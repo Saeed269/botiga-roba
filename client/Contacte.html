@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botiga de Roba · Contacte</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./contacte.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1><i class="fa-solid fa-shirt"></i> Botiga de Roba</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="./index.html">Inici</a></li>
+                <li><a href="./index.html">Catàleg</a></li>
+                <li><a href="./contacte.html" class="actiu">Contacte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-contacte">
+
+        <div class="contacte-titol">
+            <h2>Contacta amb nosaltres</h2>
+            <p>Estem aquí per ajudar-te. Envia'ns un missatge o vine a visitar-nos.</p>
+        </div>
+
+        <section class="contacte-grid">
+
+            <section class="formulari-seccio">
+                <h3>Envia'ns un missatge</h3>
+                <form id="form-contacte" action="https://formspree.io/f/xrbrvzrq" method="POST">
+                    <fieldset>
+                        <legend>Dades de contacte</legend>
+
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="El teu nom" pattern="[A-Za-zÀ-ÿ\s]{2,50}" title="Mínim 2 caràcters" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="exemple@correu.com" required>
+
+                        <label for="missatge">Missatge</label>
+                        <textarea id="missatge" name="missatge" placeholder="Escriu el teu missatge aquí..." rows="5" required></textarea>
+                    </fieldset>
+
+                    <button type="submit" class="btn-enviar">
+                        <i class="fa-solid fa-paper-plane"></i> Enviar missatge
+                    </button>
+                </form>
+            </section>
+
+            <div class="info-wrapper">
+                <aside class="info-seccio">
+                <h3>On som</h3>
+                <ul class="info-llista">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Adreça</strong>
+                            <p>Carrer de la Moda, 42<br>08001 Barcelona</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong>Telèfon</strong>
+                            <p>+34 93 123 45 67</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <p>info@botigaderoba.cat</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <strong>Horari</strong>
+                            <p>Dl - Dv: 9:00 - 20:00<br>Ds: 10:00 - 14:00</p>
+                        </div>
+                    </li>
+                </ul>
+                </aside>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Botiga de Roba · Tots els drets reservats</p>
+    </footer>
+
+</body>
+
+</html>

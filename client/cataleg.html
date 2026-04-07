@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botiga de Roba · Catàleg</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./cataleg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1><i class="fa-solid fa-shirt"></i> Botiga de Roba</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="./index.html">Inici</a></li>
+                <li><a href="./cataleg.html" class="actiu">Catàleg</a></li>
+                <li><a href="./contacte.html">Contacte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-cataleg">
+
+        <section class="cataleg-header">
+            <h2>Catàleg de Productes</h2>
+            <button id="btn-afegir">
+                <i class="fa-solid fa-plus"></i> Afegir Producte
+            </button>
+        </section>
+
+        <section class="categoria-seccio" id="seccio-samarretes">
+            <h3><i class="fa-solid fa-shirt"></i> Samarretes</h3>
+            <div class="cards-productes"></div>
+        </section>
+
+        <section class="categoria-seccio" id="seccio-pantalons">
+            <h3><i class="fa-solid fa-person"></i> Pantalons</h3>
+            <div class="cards-productes"></div>
+        </section>
+
+        <section class="categoria-seccio" id="seccio-jaquetes">
+            <h3><i class="fa-solid fa-vest"></i> Jaquetes</h3>
+            <div class="cards-productes"></div>
+        </section>
+
+        <div id="modal" class="modal hidden">
+            <div class="modal-contingut">
+                <h3 id="modal-titol">Afegir Producte</h3>
+                <fieldset>
+                    <legend>Dades del producte</legend>
+
+                    <label for="input-nom">Nom</label>
+                    <input type="text" id="input-nom" placeholder="Nom del producte" pattern="[A-Za-zÀ-ÿ\s]{2,50}" required>
+
+                    <label for="input-preu">Preu (€)</label>
+                    <input type="number" id="input-preu" placeholder="0.00" min="0" max="9999" step="0.01" required>
+
+                    <label for="input-talla">Talla</label>
+                    <select id="input-talla" required>
+                        <option value="">Selecciona una talla</option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+
+                    <label for="input-categoria">Categoria</label>
+                    <select id="input-categoria" required>
+                        <option value="">Selecciona una categoria</option>
+                        <option value="Samarretes">Samarretes</option>
+                        <option value="Pantalons">Pantalons</option>
+                        <option value="Jaquetes">Jaquetes</option>
+                    </select>
+
+                    <label for="input-imatge">Nom de la imatge</label>
+                    <input type="text" id="input-imatge" placeholder="samarreta1.jpg" required>
+                </fieldset>
+
+                <div class="modal-botons">
+                    <button id="btn-guardar"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
+                    <button id="btn-cancelar"><i class="fa-solid fa-xmark"></i> Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Botiga de Roba · Tots els drets reservats</p>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
